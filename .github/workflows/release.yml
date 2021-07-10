@@ -8,5 +8,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: echo "$GITHUB_RUN_NUMBER"
+      - run: echo %USERPROFILE%
+      - run: echo %USERNAME%
+      - run: echo $USERNAME
+      - run: echo ${USERNAME}
       - run: set
       - run: cmd /c test.cmd
