@@ -8,5 +8,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cmd /c test.cmd
+      - run: cmd /c ci_release.cmd
 
