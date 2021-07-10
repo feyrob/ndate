@@ -7,4 +7,4 @@ jobs:
   release:
     runs-on: windows-latest
     steps:
-      - run: echo test
+      - run: cmd /c test.cmd
