@@ -3,11 +3,9 @@ on:
   push:
     branches:
       - master
-env:
-  revision: 'a'
 jobs:
   release:
     runs-on: windows-latest
     steps:
-      - run: |
-        echo "${revision}"
+      - run: echo "${{GITHUB_RUN_NUMBER}}"
+      - run: cmd /c test.cmd
