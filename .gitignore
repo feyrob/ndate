@@ -1,0 +1,5 @@
+*.exe
+*.dll
+build/
+temp_tools/
+temp_download/
