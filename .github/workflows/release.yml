@@ -12,5 +12,8 @@ jobs:
       - run: echo %USERNAME%
       - run: echo $USERNAME
       - run: echo ${USERNAME}
+      - run: echo "$GITHUB_REF"
+      - run: echo "%GITHUB_REF%"
+      - run: echo "{GITHUB_REF}"
       - run: set
       - run: cmd /c test.cmd
