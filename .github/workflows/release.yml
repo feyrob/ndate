@@ -7,13 +7,13 @@ jobs:
   release:
     runs-on: windows-latest
     steps:
-      - run: echo "$GITHUB_RUN_NUMBER"
-      - run: echo %USERPROFILE%
-      - run: echo %USERNAME%
-      - run: echo $USERNAME
-      - run: echo ${USERNAME}
-      - run: echo "$GITHUB_REF"
-      - run: echo "%GITHUB_REF%"
-      - run: echo "{GITHUB_REF}"
-      - run: set
+      - run: cmd /c echo "$GITHUB_RUN_NUMBER"
+      - run: cmd /c echo %USERPROFILE%
+      - run: cmd /c echo %USERNAME%
+      - run: cmd /c echo $USERNAME
+      - run: cmd /c echo ${USERNAME}
+      - run: cmd /c echo "$GITHUB_REF"
+      - run: cmd /c echo "%GITHUB_REF%"
+      - run: cmd /c echo "{GITHUB_REF}"
+      - run: cmd /c set
       - run: cmd /c test.cmd
