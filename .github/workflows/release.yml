@@ -8,4 +8,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: |
-          test.cmd
+          - cmd /c test.cmd
