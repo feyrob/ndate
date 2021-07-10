@@ -11,7 +11,10 @@ jobs:
       - run: cmd /c echo %USERPROFILE%
       - run: cmd /c echo %USERNAME%
       - run: cmd /c echo %GITHUB_REF%
+      - run: cmd /c echo %GITHUB_WORKSPACE%
       - run: cmd /c echo %cd%
       - run: cmd /c dir
       - run: cmd /c set
       - run: cmd /c test.cmd
+      - run: cmd /c dir %GITHUB_WORKSPACE%
+
