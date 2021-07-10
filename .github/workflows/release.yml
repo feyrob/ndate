@@ -8,14 +8,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cmd /c echo %GITHUB_RUN_NUMBER%
-      - run: cmd /c echo %USERPROFILE%
-      - run: cmd /c echo %USERNAME%
-      - run: cmd /c echo %GITHUB_REF%
-      - run: cmd /c echo %GITHUB_WORKSPACE%
-      - run: cmd /c echo %cd%
-      - run: cmd /c dir
-      - run: cmd /c set
-      - run: cmd /c dir %GITHUB_WORKSPACE%
       - run: cmd /c test.cmd
 
