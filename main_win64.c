@@ -2,7 +2,7 @@
 #include <windows.h>
 #include <time.h>
 #include <sys/timeb.h>
-#include "version.h"
+#include "app_version.h"
 
 // windows types:
 // https://docs.microsoft.com/en-us/windows/win32/winprog/windows-data-types
