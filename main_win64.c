@@ -32,7 +32,7 @@ int compare_string(char *a, char *b){
 }
 
 void print_help(){
-	printf("# ndate help\n");
+	printf("# ndate v%d help\n", version);
 	printf("ndate - nimble date and time printer\n");
 	printf("\n");
 	printf("## Synopsis\n");
