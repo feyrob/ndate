@@ -12,6 +12,6 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "build_out/*.exe"
-          tag: "${{env.GITHUB_RUN_NUMBER}}"
+          tag: "v${GITHUB_RUN_NUMBER}"
           token: ${{ secrets.GITHUB_TOKEN }}
 
