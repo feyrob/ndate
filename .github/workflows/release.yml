@@ -9,4 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: cmd /c ci_release.cmd
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build_out/*.exe"
+          token: ${{ secrets.GITHUB_TOKEN }}
 
