@@ -33,5 +33,9 @@ call:get_app_name
 	
 	rem unpack zip file
 	powershell Expand-Archive -Path %tcc_zip_abspath% -DestinationPath %~dp0.\temp_tools
+	
+	echo GetFileSizeEx>>%~dp0.\temp_tools\tcc\lib\kernel32.def
+	echo __rdtsc>>%~dp0.\temp_tools\tcc\lib\kernel32.def
+
 	@echo off
 @goto:eof
