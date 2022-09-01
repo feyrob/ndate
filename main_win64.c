@@ -23,6 +23,7 @@ int compare_string(char *a, char *b){
 		if(*a > *b){
 			return 1;
 		}
+		// NOTE: if one string is shorter than the other it will already return above
 		if(*a == 0){
 			return 0;
 		}
