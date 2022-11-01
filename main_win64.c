@@ -37,8 +37,8 @@ void print_help(){
 	printf("ndate - nimble date and time printer\n");
 	printf("\n");
 	printf("## Synopsis\n");
-	printf("ndate now            utc/local simple/compat/fancy\n");
-	printf("ndate filemod <path> utc/local compat/simple/fancy\n");
+	printf("ndate now            utc/local simple/compat/short/fancy\n");
+	printf("ndate filemod <path> utc/local compat/simple/short/fancy\n");
 	printf("\n");
 	printf("## Examples\n");
 	printf("ndate now\n");
@@ -49,7 +49,7 @@ void print_help(){
 
 enum e_command{command_invalid, command_now, command_filemod};
 enum e_zone{zone_invalid, zone_utc, zone_local};
-enum e_tformat{tformat_invalid, tformat_simple, tformat_compat, tformat_fancy};
+enum e_tformat{tformat_invalid, tformat_simple, tformat_compat, tformat_short, tformat_fancy};
 
 int main(int argc, char **argv) {
 	if(argc == 1){
@@ -111,6 +111,9 @@ int main(int argc, char **argv) {
 		if(compare_string(arg, "compat") == 0){
 			tformat = tformat_compat;
 		}
+		if(compare_string(arg, "short") == 0){
+			tformat = tformat_short;
+		}
 		if(compare_string(arg, "fancy") == 0){
 			tformat = tformat_fancy;
 		}
@@ -151,7 +154,8 @@ int main(int argc, char **argv) {
 
 	char *time_format_easy_read = "%d-%02d-%02d %02d:%02d:%02d.%03d";
 	char *time_format_compat = "%d%02d%02dt%02d%02d%02d%03d";
-
+	char *time_format_short = "%d%02d%02d%02d%02d%02d%03d";
+	
 	if(tformat == tformat_simple){
 		print_time(time_format_easy_read, &st_out);
 		if(zone == zone_utc){
@@ -165,6 +169,9 @@ int main(int argc, char **argv) {
 			printf("z");
 		}
 		
+	}
+	if(tformat == tformat_short){
+		print_time(time_format_short, &st_out);
 	}
 	if(tformat == tformat_fancy){
 		print_time("%d-%02d-%02d %02d:%02d:%02d", &st_out);
